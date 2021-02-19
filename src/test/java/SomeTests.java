@@ -17,10 +17,11 @@ public class SomeTests {
     @Test
     @Tag("negative")
     void negativeTest() {
-        assertEquals(false, false);
+        assertEquals(true, false);
     }
 
     @Test
+    @Tag("positive")
     @DisplayName("Some negative test")
     void withStepTest() {
         step("Some step", () -> assertThat(false, is(false)));
